@@ -13,7 +13,7 @@ const element_collect = (_params) => {
         resolve(elements);
       })
       .catch(err => {
-        qw_communicate({error: true, level: 2, source: "elements.js", text: `Error with element_collect()\nError Message: ${err}`});
+        qw_c({error: true, level: 2, source: "elements.js", text: `Error with element_collect()\nError Message: ${err}`});
       });
     }
   );
@@ -42,4 +42,4 @@ const element_convert = (_params) => {
   );
 }
 
-// qw_communicate({level: 2, source: `elements.js`, text: `App started.`});
+// qw_c({level: 2, source: `elements.js`, text: `App started.`});

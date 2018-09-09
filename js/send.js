@@ -6,7 +6,7 @@ const event_send = (_params) => {
       let eventCategory, eventAction, eventLabel, eventValue;
       _start_promise(_params)
       .then(element => {
-        // qw_communicate(element);
+        // qw_c(element);
         switch(element.tagName) {
           case 'A':
             eventCategory = 'Anchor';
@@ -30,11 +30,10 @@ const event_send = (_params) => {
         return element
       })
       .then(element => {
-        qw_communicate(`ga('send', '${hitType}', '${eventCategory}', '${eventAction}', '${eventLabel}', '${eventValue ? eventValue : null}')`);
+        qw_c(`ga('send', '${hitType}', '${eventCategory}', '${eventAction}', '${eventLabel}', '${eventValue ? eventValue : null}')`);
         return element;
       })
       .then(res => resolve(res))
     }
   );
 }
-// qw_communicate({level: 2, source: `send.js`, text: `App started.`});

@@ -34,4 +34,4 @@ const event_listener = (_event_type = 'click', _collection) => {
   );
 }
 
-// qw_communicate({level: 2, source: `events.js`, text: `App started.`});
+// qw_c({level: 2, source: `events.js`, text: `App started.`});
